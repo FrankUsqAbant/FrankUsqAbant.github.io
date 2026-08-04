@@ -44,32 +44,32 @@
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.95;
+  opacity: 1;
   overflow: hidden;
   border-radius: inherit;
   transition: opacity 0.6s ease;
 }
 
-/* Viñeta sutil en bordes para contraste perfecto en avatar, título y botón */
+/* Viñeta suave en bordes para contraste perfecto sin oscurecer las montañas */
 .header-andes-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.2) 50%, rgba(15, 23, 42, 0.85) 100%);
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.45) 0%, rgba(15, 23, 42, 0.05) 50%, rgba(15, 23, 42, 0.45) 100%);
   pointer-events: none;
 }
 
 .header-andes-bg .landmark-photo-img {
   object-fit: cover;
   object-position: 50% 50%;
-  /* Verde natural, vivo y súper nítido del panorama andino */
-  filter: brightness(0.95) saturate(1.32);
+  /* Verde sierra brillante, radiante, nítido y luminoso */
+  filter: brightness(1.22) saturate(1.45);
   transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Transición cristalina al pasar el cursor sobre la cabecera */
+/* Transición cristalina y luminosa al pasar el cursor sobre la cabecera */
 .module-header:hover .header-andes-bg .landmark-photo-img {
-  filter: brightness(1.0) saturate(1.38);
+  filter: brightness(1.28) saturate(1.5);
   transform: scale(1.01);
 }
 

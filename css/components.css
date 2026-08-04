@@ -4,7 +4,7 @@
 
 /* --- MODULE HEADER COMPONENT --- */
 .module-header {
-  background: rgba(30, 41, 59, 0.45);
+  background: rgba(15, 23, 42, 0.22);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: 18px 26px;
