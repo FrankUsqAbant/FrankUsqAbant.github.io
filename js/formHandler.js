@@ -2,13 +2,13 @@
  * Frank Abanto — Form Handler & Security Module (formHandler.js)
  * Manages Web3Forms submission, input sanitization, rate-limiting, and alerts.
  *
- * SECURITY NOTES:
- *   - User inputs are sanitized via sanitizeInput() before network transmission.
- *   - All DOM output uses textContent (never innerHTML), preventing XSS.
- *   - The Web3Forms access key is stored in localStorage for convenience.
- *     This is intentional: the key is non-sensitive (public-facing form service),
- *     and the user is the owner of the page who configures it themselves.
- *   - Rate limiting (45s cooldown) prevents form spam from client side.
+ * SECURITY & ARCHITECTURE NOTES:
+ *   - Web3Forms Access Key is a PUBLIC routing key (designed for frontend static sites).
+ *     It operates like a Formspree endpoint or reCAPTCHA site key — not a private secret.
+ *   - Form submissions are protected by Web3Forms domain validation and honeypot checks.
+ *   - Client-side inputs are sanitized via sanitizeInput() before network transmission.
+ *   - All status feedback uses textContent (never innerHTML), preventing XSS vectors.
+ *   - Rate limiting (45s cooldown) prevents spam submissions client side.
  */
 
 window.FormHandler = {

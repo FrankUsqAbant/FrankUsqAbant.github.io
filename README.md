@@ -73,6 +73,15 @@ window.APP_CONFIG = {
 
 ---
 
+## 🔒 Arquitectura de Seguridad
+
+- **Key Pública Web3Forms**: La clave de Web3Forms es por diseño un *enrutador público de formularios frontend* (similar a una Site Key de reCAPTCHA o endpoint de Formspree). No es una clave privada ni otorga acceso a tu cuenta.
+- **Honeypot Anti-Spam**: Filtro anti-bots integrado en el HTML (`botcheck`).
+- **Sanitización & TextContent**: Entradas sanitizadas client-side y renderizado del DOM mediante `textContent` para prevenir XSS.
+- **Rate-Limiting**: Cooldown de 45s entre envíos para prevenir spam.
+
+---
+
 ## 🚀 Sitio en Vivo
 
 👉 **[https://frankusqabant.github.io](https://frankusqabant.github.io)**
