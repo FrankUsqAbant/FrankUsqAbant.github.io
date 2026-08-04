@@ -351,8 +351,8 @@
   font-family: var(--font-body);
   font-size: 0.9375rem;
   outline: none;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   transition: background var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
   width: 100%;
 }
