@@ -1,0 +1,83 @@
+/* ==========================================================================
+   PERUVIAN TOURIST LANDMARKS - REAL PHOTO STYLES (landmarks.css)
+   Fondos con fotos reales autenticadas de centros turísticos del Perú.
+   Usa background-image en divs para renderizado inmediato y nítido.
+   ========================================================================== */
+
+/* --- GENERAL PHOTO STYLING (etiqueta img HD) --- */
+.landmark-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: filter var(--transition-normal), transform var(--transition-normal);
+}
+
+/* --- 1. MACHU PICCHU CITADEL (Contact Form Background) --- */
+.landmark-machupicchu-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 1;
+  overflow: hidden;
+  border-radius: inherit;
+  transition: opacity var(--transition-normal);
+}
+
+.landmark-machupicchu-bg .landmark-photo-img {
+  filter: brightness(0.62) saturate(1.35);
+  transition: filter var(--transition-normal), transform var(--transition-normal);
+}
+
+.contact-box:hover .landmark-machupicchu-bg .landmark-photo-img {
+  filter: brightness(0.3) saturate(1.05) blur(3px);
+}
+
+/* --- 2. CORDILLERA DE LOS ANDES (Header Background) --- */
+.header-andes-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 1;
+  overflow: hidden;
+  border-radius: inherit;
+  transition: opacity var(--transition-normal);
+}
+
+.header-andes-bg .landmark-photo-img {
+  object-position: 50% 88%;
+  filter: brightness(0.75) saturate(1.4);
+  transition: filter var(--transition-normal), transform var(--transition-normal);
+}
+
+.module-header:hover .header-andes-bg .landmark-photo-img {
+  filter: brightness(0.3) saturate(1.05) blur(3px);
+}
+
+/* --- 3. CARD LANDMARK PHOTO OVERLAYS --- */
+.card-landmark-art {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 1;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
+
+.card-landmark-art .landmark-photo-img {
+  /* Paisaje visible y atmosférico */
+  filter: brightness(0.55) saturate(1.35);
+}
+
+.card-item:hover .card-landmark-art {
+  transform: scale(1.04);
+}
+
+.card-item:hover .card-landmark-art .landmark-photo-img {
+  /* Al pasar el cursor, se difumina para resaltar texto e íconos */
+  filter: brightness(0.28) saturate(1.05) blur(4px);
+}

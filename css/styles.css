@@ -1,0 +1,54 @@
+/* ==========================================================================
+   MAIN STYLESHEET ENTRYPOINT (styles.css)
+   Imports design tokens (base.css) and modular UI components (components.css)
+   ========================================================================== */
+
+@import url('base.css');
+@import url('components.css');
+@import url('landmarks.css');
+
+/* Key Setup Accordion Customization */
+.key-accordion {
+  margin-bottom: 20px;
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+}
+
+.key-accordion summary {
+  cursor: pointer;
+  color: var(--text-muted);
+  user-select: none;
+}
+
+.key-accordion summary:hover { color: var(--accent-teal); }
+
+.key-accordion-body {
+  margin-top: 10px;
+  padding: 14px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.key-input-flex {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-save-key {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 0 16px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-save-key:hover {
+  background: var(--accent-teal);
+  color: #0a0d12;
+}
