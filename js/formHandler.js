@@ -86,9 +86,8 @@ window.FormHandler = {
       return;
     }
 
-    if (accessKey === 'YOUR_ACCESS_KEY_HERE' || !accessKey) {
-      this.showStatus('⚠️ Por favor agrega tu Access Key de Web3Forms en la sección de configuración desplegable.', 'error');
-      document.querySelector('.key-accordion')?.scrollIntoView({ behavior: 'smooth' });
+    if (!accessKey) {
+      this.showStatus('⚠️ No se encontró la Access Key de Web3Forms. Verifica config.js.', 'error');
       return;
     }
 
