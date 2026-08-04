@@ -33,26 +33,6 @@
 
 ---
 
-## 💻 Código de Configuración Rápida (`js/config.js`)
-
-```javascript
-window.APP_CONFIG = {
-  USER_INFO: {
-    name: 'Frank Abanto',
-    username: 'FrankUsqAbant',
-    avatarUrl: 'https://avatars.githubusercontent.com/u/90288287?v=4',
-    siteUrl: 'https://frankusqabant.github.io'
-  },
-  WEB3FORMS_KEY: '1d87ffd7-8edb-44eb-8511-60ba0356a761',
-  SOCIAL_NETWORKS: [
-    { id: 'GitHub', name: 'GitHub', handle: 'FrankUsqAbant', url: 'https://github.com/FrankUsqAbant' },
-    { id: 'LinkedIn', name: 'LinkedIn', handle: 'in/frankabanto', url: 'https://linkedin.com/in/frankabanto' }
-  ]
-};
-```
-
----
-
 ## 📁 Arquitectura del Proyecto
 
 ```
