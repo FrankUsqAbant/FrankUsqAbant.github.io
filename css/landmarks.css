@@ -44,23 +44,32 @@
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: 1;
+  opacity: 0.9;
   overflow: hidden;
   border-radius: inherit;
   transition: opacity 0.6s ease;
 }
 
+/* Vignette gradient de contraste para mantener legibilidad de texto y botón */
+.header-andes-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.35) 50%, rgba(15, 23, 42, 0.88) 100%);
+  pointer-events: none;
+}
+
 .header-andes-bg .landmark-photo-img {
-  object-position: 50% 88%;
+  object-position: 50% 50%;
   /* Verde natural, vivo y nítido de la sierra peruana */
-  filter: brightness(0.92) saturate(1.4);
+  filter: brightness(0.9) saturate(1.35);
   transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Transición casi imperceptible al pasar el cursor sobre la cabecera */
+/* Transición elegante al pasar el cursor sobre la cabecera */
 .module-header:hover .header-andes-bg .landmark-photo-img {
-  filter: brightness(0.85) saturate(1.3);
-  transform: scale(1.01);
+  filter: brightness(0.98) saturate(1.4);
+  transform: scale(1.02);
 }
 
 /* --- 3. CARD LANDMARK PHOTO OVERLAYS --- */

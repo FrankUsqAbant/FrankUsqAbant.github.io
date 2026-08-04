@@ -1,16 +1,25 @@
-# 🦙 Frank Abanto — Tarjeta Digital & Redes Sociales
-
-<div align="right">
-  <a href="https://frankusqabant.github.io">
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=https://frankusqabant.github.io&color=0f172a&bgcolor=14b8a6&margin=4" alt="Código QR del Sitio" title="Escanea para abrir en móvil" width="100" height="100" />
-  </a>
-</div>
-
-[![Live Site](https://img.shields.io/badge/Website-frankusqabant.github.io-14b8a6?style=for-the-badge&logo=googlechrome&logoColor=white)](https://frankusqabant.github.io)
-[![Mobile Responsive](https://img.shields.io/badge/Mobile-100%25%20Responsive-38bdf8?style=for-the-badge&logo=android)](https://frankusqabant.github.io)
-[![Perú](https://img.shields.io/badge/Made%20in-Perú%20🇵🇪-ef4444?style=for-the-badge)](#)
-
-> **Tarjeta de presentación digital e interactiva** con redes sociales, fotos optimizadas del Perú, formulario directo sin backend y la mascota animada **Llamita Peruana Dev**.
+<table border="0" width="100%">
+  <tr>
+    <td valign="top" width="75%">
+      <h1>🦙 Frank Abanto — Tarjeta Digital & Redes Sociales</h1>
+      <p>
+        <a href="https://frankusqabant.github.io">
+          <img src="https://img.shields.io/badge/Website-frankusqabant.github.io-14b8a6?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website" />
+        </a>
+        <a href="https://frankusqabant.github.io">
+          <img src="https://img.shields.io/badge/Mobile-100%25%20Responsive-38bdf8?style=for-the-badge&logo=android" alt="Mobile" />
+        </a>
+        <img src="https://img.shields.io/badge/Made%20in-Perú%20🇵🇪-ef4444?style=for-the-badge" alt="Perú" />
+      </p>
+      <p><strong>Tarjeta de presentación digital e interactiva</strong> con enlaces profesionales, fotos optimizadas del Perú, formulario de contacto directo sin backend y la mascota animada <strong>Llamita Peruana Dev</strong>.</p>
+    </td>
+    <td valign="middle" align="center" width="25%">
+      <a href="https://frankusqabant.github.io">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://frankusqabant.github.io&color=0f172a&bgcolor=ffffff&ecc=H&margin=8" width="130" height="130" alt="Código QR de Frank Abanto" title="Escanea para abrir en móvil" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -70,15 +79,6 @@ window.APP_CONFIG = {
     ├── favicon.svg       # Favicon SVG de la Llamita Peruana Dev
     └── landmarks/        # Imágenes HD ultra-comprimidas en WebP
 ```
-
----
-
-## 🔒 Arquitectura de Seguridad
-
-- **Key Pública Web3Forms**: La clave de Web3Forms es por diseño un *enrutador público de formularios frontend* (similar a una Site Key de reCAPTCHA o endpoint de Formspree). No es una clave privada ni otorga acceso a tu cuenta.
-- **Honeypot Anti-Spam**: Filtro anti-bots integrado en el HTML (`botcheck`).
-- **Sanitización & TextContent**: Entradas sanitizadas client-side y renderizado del DOM mediante `textContent` para prevenir XSS.
-- **Rate-Limiting**: Cooldown de 45s entre envíos para prevenir spam.
 
 ---
 
