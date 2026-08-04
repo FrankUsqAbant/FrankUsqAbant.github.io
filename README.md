@@ -1,92 +1,69 @@
-# 🦙 Tarjeta Digital Interactiva — Frank Abanto
+# 🦙 Frank Abanto — Tarjeta Digital & Redes Sociales
 
-**Tarjeta de presentación digital** con redes sociales, formulario de contacto directo y mascota llama animada. Publicada en GitHub Pages.
+[![Live Site](https://img.shields.io/badge/Website-frankusqabant.github.io-14b8a6?style=for-the-badge&logo=googlechrome&logoColor=white)](https://frankusqabant.github.io)
+[![License](https://img.shields.io/badge/License-MIT-38bdf8?style=for-the-badge)](LICENSE)
+[![Perú](https://img.shields.io/badge/Made%20in-Perú%20🇵🇪-ef4444?style=for-the-badge)](#)
 
-🔗 **Live:** [frankusqabant.github.io](https://frankusqabant.github.io)
+> **Tarjeta de presentación digital e interactiva** con enlaces profesionales, formulario de contacto traslúcido y la mascota animada **Llamita Peruana Dev**.
 
 ---
 
-## Estructura del Proyecto
+## ⚡ Características Destacadas
+
+- 🦙 **Mascota Interactiva**: Llamita peruana animada que te acompaña y reacciona al interactuar con las tarjetas.
+- 🇵🇪 **Paisajes del Perú**: Fondos fotográficos optimizados (Machu Picchu, Sacsayhuamán, Huacachina, Titicaca, Vinicunca, Paracas, Nazca, Sierra Verde).
+- 📧 **Contacto Directo**: Formulario con Web3Forms preconfigurado que envía mensajes a tu correo sin backend.
+- 📱 **Código QR Integrado**: Modal responsivo para escaneo rápido en tarjetas físicas.
+- ⚡ **Rendimiento Ultrarrápido**: Imágenes en WebP optimizadas (< 50 KB cada una) y precarga instantánea.
+- 🔒 **Seguridad Avanzada**: CSP estricto, sanitización de entradas, rate-limiting y protección de credenciales en `localStorage`.
+
+---
+
+## 📁 Arquitectura del Proyecto
 
 ```
 /
-├── index.html               # Entrada principal (HTML semántico + CSP)
-├── .nojekyll                # Deshabilita procesamiento Jekyll en GitHub Pages
-├── README.md
+├── index.html            # HTML5 semántico + CSP + Precarga
+├── .nojekyll             # Servidor GitHub Pages en modo directo
+├── README.md             # Documentación principal
 │
-├── css/
-│   ├── styles.css           # Entrypoint CSS — importa los módulos
-│   ├── base.css             # Design tokens, reset y layout base
-│   ├── components.css       # Componentes UI (cards, form, modal, mascota)
-│   └── landmarks.css        # Estilos de las fotos de landmarks peruanos
+├── css/                  # Estilos modulares
+│   ├── styles.css        # Entrypoint de estilos
+│   ├── base.css          # Design tokens & variables CSS
+│   ├── components.css    # Cards, formulario traslúcido y mascota
+│   └── landmarks.css     # Transiciones suaves de fotos del Perú
 │
-├── js/
-│   ├── config.js            # 📌 Configuración central: redes sociales y textos
-│   ├── landmarksData.js     # Imágenes de landmarks (referencias a assets/)
-│   ├── components.js        # Renderizado de cards, modal QR, tilt 3D
-│   ├── mascot.js            # Llama SVG interactiva animada
-│   ├── formHandler.js       # Envío de formulario, validación y rate-limit
-│   └── app.js               # Inicializador principal (DOMContentLoaded)
+├── js/                   # Lógica JavaScript (ES6 Vanilla)
+│   ├── config.js         # Configuración central de redes y datos
+│   ├── landmarksData.js  # Referencias optimizadas WebP/JPG
+│   ├── components.js     # Renderizado de cards y modal QR
+│   ├── mascot.js         # Animación y seguimiento de la llamita
+│   ├── formHandler.js    # Envío de formulario y sanitización
+│   └── app.js            # Punto de entrada principal
 │
 └── assets/
-    ├── favicon.svg
-    └── landmarks/           # Fotos HD de lugares turísticos del Perú
-        ├── machupicchu.jpg
-        ├── sierra-verde.jpg
-        ├── sacsayhuaman.jpg
-        ├── titicaca.jpg
-        ├── huacachina.jpg
-        ├── vinicunca.jpg
-        ├── nazca.jpg
-        └── paracas.jpg
+    ├── favicon.svg       # Favicon SVG de la Llamita Peruana Dev
+    └── landmarks/        # Imágenes HD optimizadas en formato WebP & JPG
 ```
 
 ---
 
-## Configuración — Formulario de Contacto
-
-El formulario usa **Web3Forms** (gratis, sin backend).
-
-1. Regístrate en [web3forms.com](https://web3forms.com) con tu correo
-2. Copia tu **Access Key** gratuita
-3. En la tarjeta, abre el acordeón **"Configurar envío directo de correo"**
-4. Pega la key y haz clic en **Guardar** — queda guardada en tu navegador
-
----
-
-## Personalización
-
-Edita **`js/config.js`** para cambiar:
-- Tu nombre, usuario y avatar (`USER_INFO`)
-- URLs y handles de redes sociales (`SOCIAL_NETWORKS`)
-- Textos adaptativos del formulario por red (`PLATFORM_CONFIGS`)
-
-Cada red social tiene un `landmarkKey` que referencia la imagen de fondo en `LANDMARKS_DATA`.
-
----
-
-## Seguridad
-
-- **CSP** declarada en `<meta http-equiv="Content-Security-Policy">`
-- **Honeypot** anti-bot en el formulario
-- **Rate limiting** client-side (45 segundos entre envíos)
-- **Sanitización** de inputs antes del envío a Web3Forms
-- **textContent** (nunca innerHTML) para outputs de usuario al DOM
-- **`noreferrer`** en todos los `target="_blank"`
-
----
-
-## Tech Stack
+## 🛠️ Tecnologías
 
 | Capa | Tecnología |
 |------|-----------|
-| Estructura | HTML5 semántico |
-| Estilos | Vanilla CSS (modular) |
-| Lógica | Vanilla JS ES6+ (modular, sin dependencias) |
-| Fuentes | Google Fonts — Inter + Outfit |
-| Formulario | Web3Forms API |
-| Deploy | GitHub Pages |
+| **Estructura** | HTML5 semántico |
+| **Diseño** | Vanilla CSS (Glassmorphism & Micro-interacciones) |
+| **Lógica** | JavaScript ES6+ Vanilla (Sin frameworks pesados) |
+| **Imágenes** | WebP (Next-Gen Format) |
+| **Servicio Email** | Web3Forms API |
+| **Hosting** | GitHub Pages |
 
 ---
+
+## 🚀 Despliegue en Vivo
+
+Accede a la versión pública publicada en:
+👉 **[https://frankusqabant.github.io](https://frankusqabant.github.io)**
 
 © 2026 Frank Abanto — Software Engineer

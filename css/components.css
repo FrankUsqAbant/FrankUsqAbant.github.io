@@ -269,10 +269,11 @@
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: 26px 28px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(1.5px); /* Casi nada difuminado */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   transition: background var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
@@ -848,7 +849,9 @@
   pointer-events: none;
   transition: left 0.42s cubic-bezier(0.25, 1, 0.5, 1), top 0.42s cubic-bezier(0.25, 1, 0.5, 1);
   will-change: left, top, transform;
-  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
+  transform: scale(0.82);
+  transform-origin: center bottom;
 }
 
 .mascot-body {

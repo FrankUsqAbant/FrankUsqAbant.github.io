@@ -10,7 +10,8 @@ window.APP_CONFIG = {
     avatarUrl: 'https://avatars.githubusercontent.com/u/90288287?v=4',
     siteUrl: 'https://frankusqabant.github.io'
   },
-  WEB3FORMS_KEY: '1d87ffd7-8edb-44eb-8511-60ba0356a761',
+  // Web3Forms Key persists dynamically in browser localStorage for privacy & security
+  WEB3FORMS_KEY: localStorage.getItem('web3forms_access_key') || '',
 
   SOCIAL_NETWORKS: [
     {
