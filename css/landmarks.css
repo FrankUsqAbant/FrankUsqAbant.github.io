@@ -1,7 +1,7 @@
 /* ==========================================================================
    PERUVIAN TOURIST LANDMARKS - REAL PHOTO STYLES (landmarks.css)
    Fondos con fotos reales autenticadas de centros turísticos del Perú.
-   Transiciones ultra-suaves de brillo, contraste y opacidad.
+   Transiciones suaves de brillo, contraste y difuminado sutil en hover.
    ========================================================================== */
 
 /* --- GENERAL PHOTO STYLING --- */
@@ -27,14 +27,14 @@
 }
 
 .landmark-machupicchu-bg .landmark-photo-img {
-  /* Brillo natural, radiante y vivo para la ciudadela de Machu Picchu */
-  filter: brightness(0.95) saturate(1.35);
+  /* Fondo lleno de vida, brillante, radiante y rico en color verde esmeralda */
+  filter: brightness(1.22) saturate(1.5) contrast(1.08);
   transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Transición súper suave y luminosa al pasar el cursor sobre el formulario */
+/* Transición suave al pasar el cursor sobre el formulario */
 .contact-box:hover .landmark-machupicchu-bg .landmark-photo-img {
-  filter: brightness(0.88) saturate(1.25);
+  filter: brightness(1.15) saturate(1.4) blur(1.5px);
   transform: scale(1.01);
 }
 
@@ -50,26 +50,25 @@
   transition: opacity 0.6s ease;
 }
 
-/* Viñeta suave en bordes para contraste perfecto sin oscurecer las montañas */
+/* Viñeta suave en bordes para contraste perfecto en avatar, título y botón */
 .header-andes-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(15, 23, 42, 0.45) 0%, rgba(15, 23, 42, 0.05) 50%, rgba(15, 23, 42, 0.45) 100%);
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.05) 50%, rgba(15, 23, 42, 0.4) 100%);
   pointer-events: none;
 }
 
 .header-andes-bg .landmark-photo-img {
   object-fit: cover;
   object-position: 50% 50%;
-  /* Verde sierra brillante, radiante, nítido y luminoso */
   filter: brightness(1.22) saturate(1.45);
   transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Transición cristalina y luminosa al pasar el cursor sobre la cabecera */
+/* Un poquito de difuminado sutil (blur 2.5px) al pasar el mouse sobre la cabecera */
 .module-header:hover .header-andes-bg .landmark-photo-img {
-  filter: brightness(1.28) saturate(1.5);
+  filter: brightness(1.05) saturate(1.35) blur(2.5px);
   transform: scale(1.01);
 }
 
@@ -95,7 +94,7 @@
   transform: scale(1.02);
 }
 
+/* Un poquito de difuminado sutil (blur 3px) al pasar el mouse sobre las tarjetas */
 .card-item:hover .card-landmark-art .landmark-photo-img {
-  /* Cambio muy sutil sin oscurecimiento brusco */
-  filter: brightness(0.58) saturate(1.2);
+  filter: brightness(0.48) saturate(1.2) blur(3px);
 }
