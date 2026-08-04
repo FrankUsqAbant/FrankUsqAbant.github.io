@@ -38,38 +38,39 @@
   transform: scale(1.01);
 }
 
-/* --- 2. CAMPO VERDE DE LA SIERRA PERUANA (Header Background) --- */
+/* --- 2. PANORAMA HD CAMPO VERDE DE LA SIERRA PERUANA (Header Background) --- */
 .header-andes-bg {
   position: absolute;
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.9;
+  opacity: 0.95;
   overflow: hidden;
   border-radius: inherit;
   transition: opacity 0.6s ease;
 }
 
-/* Vignette gradient de contraste para mantener legibilidad de texto y botón */
+/* Viñeta sutil en bordes para contraste perfecto en avatar, título y botón */
 .header-andes-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.35) 50%, rgba(15, 23, 42, 0.88) 100%);
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.2) 50%, rgba(15, 23, 42, 0.85) 100%);
   pointer-events: none;
 }
 
 .header-andes-bg .landmark-photo-img {
+  object-fit: cover;
   object-position: 50% 50%;
-  /* Verde natural, vivo y nítido de la sierra peruana */
-  filter: brightness(0.9) saturate(1.35);
+  /* Verde natural, vivo y súper nítido del panorama andino */
+  filter: brightness(0.95) saturate(1.32);
   transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Transición elegante al pasar el cursor sobre la cabecera */
+/* Transición cristalina al pasar el cursor sobre la cabecera */
 .module-header:hover .header-andes-bg .landmark-photo-img {
-  filter: brightness(0.98) saturate(1.4);
-  transform: scale(1.02);
+  filter: brightness(1.0) saturate(1.38);
+  transform: scale(1.01);
 }
 
 /* --- 3. CARD LANDMARK PHOTO OVERLAYS --- */
