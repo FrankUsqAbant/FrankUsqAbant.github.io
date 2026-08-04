@@ -32,8 +32,9 @@
   --max-width: 860px;
 
   /* Animations */
-  --transition-fast: 0.18s ease;
-  --transition-normal: 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease-in-out;
+  --transition-smooth: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *, *::before, *::after {

@@ -4,17 +4,18 @@
 
 /* --- MODULE HEADER COMPONENT --- */
 .module-header {
-  background: rgba(30, 41, 59, 0.7);
+  background: rgba(30, 41, 59, 0.65);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: 18px 26px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
   position: relative;
   overflow: hidden;
+  transition: background var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
 .profile-brand {
@@ -81,10 +82,10 @@
 .card-item {
   position: relative;
   border-radius: var(--radius-md);
-  background: rgba(30, 41, 59, 0.68);
+  background: rgba(30, 41, 59, 0.62);
   border: 1px solid var(--border-color);
   overflow: hidden;
-  transition: var(--transition-normal);
+  transition: transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1), background 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease;
   cursor: pointer;
 }
 
@@ -264,14 +265,15 @@
 
 /* --- FORM COMPONENTS --- */
 .contact-box {
-  background: rgba(30, 41, 59, 0.75);
+  background: rgba(15, 23, 42, 0.65);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: 26px 28px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(1.5px); /* Casi nada difuminado */
+  transition: background var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
 .contact-box > form {
@@ -337,16 +339,27 @@
 }
 
 .field-input, .field-textarea {
-  background: var(--bg-input);
-  border: 1px solid var(--border-color);
+  background: rgba(15, 23, 42, 0.48); /* Cuadros traslúcidos y elegantes */
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius-sm);
   padding: 13px 18px;
   color: var(--text-primary);
   font-family: var(--font-body);
   font-size: 0.9375rem;
   outline: none;
-  transition: var(--transition-normal);
+  transition: background var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
   width: 100%;
+}
+
+.field-input:hover, .field-textarea:hover {
+  background: rgba(15, 23, 42, 0.65);
+  border-color: rgba(20, 184, 166, 0.35);
+}
+
+.field-input:focus, .field-textarea:focus {
+  background: rgba(15, 23, 42, 0.8);
+  border-color: var(--accent-teal);
+  box-shadow: 0 0 14px rgba(20, 184, 166, 0.2);
 }
 
 /* TOGGLE CONTACT TRIGGER BUTTON */
@@ -422,14 +435,14 @@
 .icon-picker-btn {
   width: 48px;
   height: 48px;
-  background: var(--bg-input);
-  border: 1px solid var(--border-color);
+  background: rgba(15, 23, 42, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-sm);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: var(--transition-normal);
+  transition: background var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth), transform var(--transition-fast);
   flex: 0 0 auto;
 }
 

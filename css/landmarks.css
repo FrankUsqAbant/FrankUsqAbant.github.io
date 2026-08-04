@@ -1,16 +1,16 @@
 /* ==========================================================================
    PERUVIAN TOURIST LANDMARKS - REAL PHOTO STYLES (landmarks.css)
    Fondos con fotos reales autenticadas de centros turísticos del Perú.
-   Usa background-image en divs para renderizado inmediato y nítido.
+   Transiciones ultra-suaves de brillo, contraste y opacidad.
    ========================================================================== */
 
-/* --- GENERAL PHOTO STYLING (etiqueta img HD) --- */
+/* --- GENERAL PHOTO STYLING --- */
 .landmark-photo-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: filter var(--transition-normal), transform var(--transition-normal);
+  transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease;
 }
 
 /* --- 1. MACHU PICCHU CITADEL (Contact Form Background) --- */
@@ -22,16 +22,18 @@
   opacity: 1;
   overflow: hidden;
   border-radius: inherit;
-  transition: opacity var(--transition-normal);
+  transition: opacity 0.6s ease;
 }
 
 .landmark-machupicchu-bg .landmark-photo-img {
-  filter: brightness(0.62) saturate(1.35);
-  transition: filter var(--transition-normal), transform var(--transition-normal);
+  filter: brightness(0.55) saturate(1.2);
+  transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Transición suave al pasar el cursor sobre la caja de contacto */
 .contact-box:hover .landmark-machupicchu-bg .landmark-photo-img {
-  filter: brightness(0.3) saturate(1.05) blur(3px);
+  filter: brightness(0.45) saturate(1.1) blur(1.5px);
+  transform: scale(1.02);
 }
 
 /* --- 2. CORDILLERA DE LOS ANDES (Header Background) --- */
@@ -43,17 +45,19 @@
   opacity: 1;
   overflow: hidden;
   border-radius: inherit;
-  transition: opacity var(--transition-normal);
+  transition: opacity 0.6s ease;
 }
 
 .header-andes-bg .landmark-photo-img {
   object-position: 50% 88%;
-  filter: brightness(0.75) saturate(1.4);
-  transition: filter var(--transition-normal), transform var(--transition-normal);
+  filter: brightness(0.7) saturate(1.3);
+  transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Transición suave al pasar el cursor sobre la cabecera */
 .module-header:hover .header-andes-bg .landmark-photo-img {
-  filter: brightness(0.3) saturate(1.05) blur(3px);
+  filter: brightness(0.55) saturate(1.15) blur(1px);
+  transform: scale(1.02);
 }
 
 /* --- 3. CARD LANDMARK PHOTO OVERLAYS --- */
@@ -65,19 +69,20 @@
   opacity: 1;
   overflow: hidden;
   border-radius: var(--radius-md);
-  transition: opacity var(--transition-normal), transform var(--transition-normal);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-landmark-art .landmark-photo-img {
   /* Paisaje visible y atmosférico */
-  filter: brightness(0.55) saturate(1.35);
+  filter: brightness(0.55) saturate(1.25);
+  transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-item:hover .card-landmark-art {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 .card-item:hover .card-landmark-art .landmark-photo-img {
-  /* Al pasar el cursor, se difumina para resaltar texto e íconos */
-  filter: brightness(0.28) saturate(1.05) blur(4px);
+  /* Al pasar el cursor, ajuste gradual sin saltos de opacidad */
+  filter: brightness(0.42) saturate(1.1) blur(2px);
 }
