@@ -1,21 +1,46 @@
 # 🦙 Frank Abanto — Tarjeta Digital & Redes Sociales
 
+<div align="right">
+  <a href="https://frankusqabant.github.io">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=https://frankusqabant.github.io&color=0f172a&bgcolor=14b8a6&margin=4" alt="Código QR del Sitio" title="Escanea para abrir en móvil" width="100" height="100" />
+  </a>
+</div>
+
 [![Live Site](https://img.shields.io/badge/Website-frankusqabant.github.io-14b8a6?style=for-the-badge&logo=googlechrome&logoColor=white)](https://frankusqabant.github.io)
-[![License](https://img.shields.io/badge/License-MIT-38bdf8?style=for-the-badge)](LICENSE)
+[![Mobile Responsive](https://img.shields.io/badge/Mobile-100%25%20Responsive-38bdf8?style=for-the-badge&logo=android)](https://frankusqabant.github.io)
 [![Perú](https://img.shields.io/badge/Made%20in-Perú%20🇵🇪-ef4444?style=for-the-badge)](#)
 
-> **Tarjeta de presentación digital e interactiva** con enlaces profesionales, formulario de contacto traslúcido y la mascota animada **Llamita Peruana Dev**.
+> **Tarjeta de presentación digital e interactiva** con redes sociales, fotos optimizadas del Perú, formulario directo sin backend y la mascota animada **Llamita Peruana Dev**.
 
 ---
 
 ## ⚡ Características Destacadas
 
-- 🦙 **Mascota Interactiva**: Llamita peruana animada que te acompaña y reacciona al interactuar con las tarjetas.
-- 🇵🇪 **Paisajes del Perú**: Fondos fotográficos optimizados (Machu Picchu, Sacsayhuamán, Huacachina, Titicaca, Vinicunca, Paracas, Nazca, Sierra Verde).
-- 📧 **Contacto Directo**: Formulario con Web3Forms preconfigurado que envía mensajes a tu correo sin backend.
-- 📱 **Código QR Integrado**: Modal responsivo para escaneo rápido en tarjetas físicas.
-- ⚡ **Rendimiento Ultrarrápido**: Imágenes en WebP optimizadas (< 50 KB cada una) y precarga instantánea.
-- 🔒 **Seguridad Avanzada**: CSP estricto, sanitización de entradas, rate-limiting y protección de credenciales en `localStorage`.
+- 🦙 **Mascota Peruana Dev**: Llamita animada en SVG que reacciona y te acompaña al recorrer las tarjetas.
+- 🇵🇪 **Paisajes del Perú**: Fondos fotográficos optimizados en formato WebP (Machu Picchu, Sacsayhuamán, Huacachina, Titicaca, Vinicunca, Paracas, Nazca, Sierra Verde).
+- 📧 **Formulario Directo**: Envío inmediato de correo via Web3Forms API preconfigurado.
+- 📱 **Diseño 100% Responsivo**: Adaptado perfectamente para celulares, tablets y escritorios.
+- ⚡ **Rendimiento Ultra-Ligero**: Carga completa en milisegundos (< 200 KB payload total).
+
+---
+
+## 💻 Código de Configuración Rápida (`js/config.js`)
+
+```javascript
+window.APP_CONFIG = {
+  USER_INFO: {
+    name: 'Frank Abanto',
+    username: 'FrankUsqAbant',
+    avatarUrl: 'https://avatars.githubusercontent.com/u/90288287?v=4',
+    siteUrl: 'https://frankusqabant.github.io'
+  },
+  WEB3FORMS_KEY: '1d87ffd7-8edb-44eb-8511-60ba0356a761',
+  SOCIAL_NETWORKS: [
+    { id: 'GitHub', name: 'GitHub', handle: 'FrankUsqAbant', url: 'https://github.com/FrankUsqAbant' },
+    { id: 'LinkedIn', name: 'LinkedIn', handle: 'in/frankabanto', url: 'https://linkedin.com/in/frankabanto' }
+  ]
+};
+```
 
 ---
 
@@ -23,47 +48,33 @@
 
 ```
 /
-├── index.html            # HTML5 semántico + CSP + Precarga
+├── index.html            # HTML5 semántico + CSP + Preload
 ├── .nojekyll             # Servidor GitHub Pages en modo directo
-├── README.md             # Documentación principal
+├── README.md             # Documentación principal con QR & Código
 │
 ├── css/                  # Estilos modulares
-│   ├── styles.css        # Entrypoint de estilos
+│   ├── styles.css        # Entrypoint principal de estilos
 │   ├── base.css          # Design tokens & variables CSS
-│   ├── components.css    # Cards, formulario traslúcido y mascota
+│   ├── components.css    # Cards, formulario traslúcido y responsivo mobile
 │   └── landmarks.css     # Transiciones suaves de fotos del Perú
 │
 ├── js/                   # Lógica JavaScript (ES6 Vanilla)
-│   ├── config.js         # Configuración central de redes y datos
+│   ├── config.js         # Configuración central de datos & API Key
 │   ├── landmarksData.js  # Referencias optimizadas WebP/JPG
-│   ├── components.js     # Renderizado de cards y modal QR
+│   ├── components.js     # Renderizado de tarjetas y modal QR
 │   ├── mascot.js         # Animación y seguimiento de la llamita
 │   ├── formHandler.js    # Envío de formulario y sanitización
 │   └── app.js            # Punto de entrada principal
 │
 └── assets/
     ├── favicon.svg       # Favicon SVG de la Llamita Peruana Dev
-    └── landmarks/        # Imágenes HD optimizadas en formato WebP & JPG
+    └── landmarks/        # Imágenes HD ultra-comprimidas en WebP
 ```
 
 ---
 
-## 🛠️ Tecnologías
+## 🚀 Sitio en Vivo
 
-| Capa | Tecnología |
-|------|-----------|
-| **Estructura** | HTML5 semántico |
-| **Diseño** | Vanilla CSS (Glassmorphism & Micro-interacciones) |
-| **Lógica** | JavaScript ES6+ Vanilla (Sin frameworks pesados) |
-| **Imágenes** | WebP (Next-Gen Format) |
-| **Servicio Email** | Web3Forms API |
-| **Hosting** | GitHub Pages |
-
----
-
-## 🚀 Despliegue en Vivo
-
-Accede a la versión pública publicada en:
 👉 **[https://frankusqabant.github.io](https://frankusqabant.github.io)**
 
 © 2026 Frank Abanto — Software Engineer

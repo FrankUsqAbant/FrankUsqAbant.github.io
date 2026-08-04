@@ -15,32 +15,14 @@ window.FormHandler = {
   init() {
     const contactForm = document.getElementById('contact-form');
     const accessKeyInput = document.getElementById('access_key_input');
-    const userKeyField = document.getElementById('user-key-field');
-    const saveKeyBtn = document.getElementById('save-key-btn');
-
-    // Load saved key from localStorage safely
     const savedKey = localStorage.getItem('web3forms_access_key');
-    if (savedKey) {
-      if (accessKeyInput) accessKeyInput.value = savedKey;
-      if (userKeyField) userKeyField.value = savedKey;
+    const defaultKey = window.APP_CONFIG?.WEB3FORMS_KEY || '1d87ffd7-8edb-44eb-8511-60ba0356a761';
+    
+    if (accessKeyInput) {
+      accessKeyInput.value = savedKey || defaultKey;
     }
 
-    // Save key handler — stores key in user's browser localStorage for privacy & security.
-    if (saveKeyBtn) {
-      saveKeyBtn.addEventListener('click', () => {
-        const newKey = userKeyField.value.trim();
-        if (newKey) {
-          localStorage.setItem('web3forms_access_key', newKey);
-          if (accessKeyInput) accessKeyInput.value = newKey;
-          this.showStatus('Key de Web3Forms guardada correctamente.', 'success');
-        } else {
-          localStorage.removeItem('web3forms_access_key');
-          if (accessKeyInput) accessKeyInput.value = 'YOUR_ACCESS_KEY_HERE';
-          if (userKeyField) userKeyField.value = '';
-          this.showStatus('Key eliminada de este navegador.', 'error');
-        }
-      });
-    }
+
 
     // Form submit listener
     if (contactForm) {
