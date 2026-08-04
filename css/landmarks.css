@@ -1,7 +1,7 @@
 /* ==========================================================================
    PERUVIAN TOURIST LANDMARKS - REAL PHOTO STYLES (landmarks.css)
    Fondos con fotos reales autenticadas de centros turísticos del Perú.
-   Transiciones suaves de brillo, contraste y fotos 100% nítidas en HD.
+   Sin capas oscuras ni desenfoques. Fotos 100% puras, nítidas y cristalinas.
    ========================================================================== */
 
 /* --- GENERAL PHOTO STYLING --- */
@@ -11,41 +11,37 @@
   object-fit: cover;
   object-position: center;
   opacity: 1;
-  transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease;
+  transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
 }
 
 /* --- 1. MACHU PICCHU CITADEL (Contact Form Background) --- */
 .landmark-machupicchu-bg {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
   opacity: 1;
   overflow: hidden;
   border-radius: inherit;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.5s ease;
 }
 
-/* Viñeta sutil en bordes para contraste perfecto */
+/* Sin overlay ni filtro oscuro — la foto luce pura y nítida exactamente como en las tarjetas */
 .landmark-machupicchu-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, rgba(15, 23, 42, 0.12) 50%, rgba(15, 23, 42, 0.6) 100%);
-  pointer-events: none;
+  display: none;
 }
 
 .landmark-machupicchu-bg .landmark-photo-img {
   object-fit: cover;
-  object-position: center 40%;
-  /* 100% Nítido, cristalino, radiante y sin desenfoque */
-  filter: brightness(1.15) saturate(1.4);
-  transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  object-position: center 38%;
+  /* Foto brillante, vibrante, radiante y 100% nítida */
+  filter: brightness(1.05) saturate(1.35);
+  transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Transición cristalina al pasar el cursor sobre el formulario */
 .contact-box:hover .landmark-machupicchu-bg .landmark-photo-img {
-  filter: brightness(1.22) saturate(1.45);
+  filter: brightness(1.12) saturate(1.4);
   transform: scale(1.01);
 }
 
@@ -53,33 +49,32 @@
 .header-andes-bg {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
   opacity: 1;
   overflow: hidden;
   border-radius: inherit;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.5s ease;
 }
 
-/* Viñeta suave en bordes para contraste perfecto en avatar, título y botón */
+/* Viñeta sutil para legibilidad del título y avatar */
 .header-andes-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.05) 50%, rgba(15, 23, 42, 0.4) 100%);
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.35) 0%, rgba(15, 23, 42, 0.02) 50%, rgba(15, 23, 42, 0.35) 100%);
   pointer-events: none;
 }
 
 .header-andes-bg .landmark-photo-img {
   object-fit: cover;
   object-position: 50% 50%;
-  filter: brightness(1.22) saturate(1.45);
-  transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(1.15) saturate(1.4);
+  transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Un poquito de difuminado sutil (blur 2.5px) al pasar el mouse sobre la cabecera */
 .module-header:hover .header-andes-bg .landmark-photo-img {
-  filter: brightness(1.05) saturate(1.35) blur(2.5px);
+  filter: brightness(1.2) saturate(1.45);
   transform: scale(1.01);
 }
 
@@ -105,7 +100,6 @@
   transform: scale(1.02);
 }
 
-/* Un poquito de difuminado sutil (blur 3px) al pasar el mouse sobre las tarjetas */
 .card-item:hover .card-landmark-art .landmark-photo-img {
-  filter: brightness(0.48) saturate(1.2) blur(3px);
+  filter: brightness(0.58) saturate(1.22);
 }
