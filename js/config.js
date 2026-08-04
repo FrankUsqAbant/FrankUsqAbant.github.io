@@ -10,6 +10,7 @@ window.APP_CONFIG = {
     avatarUrl: 'https://avatars.githubusercontent.com/u/90288287?v=4',
     siteUrl: 'https://frankusqabant.github.io'
   },
+  WEB3FORMS_KEY: '1d87ffd7-8edb-44eb-8511-60ba0356a761',
 
   SOCIAL_NETWORKS: [
     {

@@ -18,11 +18,16 @@ window.FormHandler = {
     const userKeyField = document.getElementById('user-key-field');
     const saveKeyBtn = document.getElementById('save-key-btn');
 
-    // Load saved key from localStorage
+    // Load saved key from localStorage or fallback to central APP_CONFIG key
     const savedKey = localStorage.getItem('web3forms_access_key');
+    const defaultKey = window.APP_CONFIG?.WEB3FORMS_KEY || '1d87ffd7-8edb-44eb-8511-60ba0356a761';
+    
     if (savedKey) {
       if (accessKeyInput) accessKeyInput.value = savedKey;
       if (userKeyField) userKeyField.value = savedKey;
+    } else {
+      if (accessKeyInput) accessKeyInput.value = defaultKey;
+      if (userKeyField) userKeyField.value = defaultKey;
     }
 
     // Save key handler — stores key in localStorage for persistence across sessions.
@@ -36,8 +41,9 @@ window.FormHandler = {
           this.showStatus('Key de Web3Forms guardada correctamente.', 'success');
         } else {
           localStorage.removeItem('web3forms_access_key');
-          if (accessKeyInput) accessKeyInput.value = 'YOUR_ACCESS_KEY_HERE';
-          this.showStatus('Key eliminada.', 'error');
+          if (accessKeyInput) accessKeyInput.value = defaultKey;
+          if (userKeyField) userKeyField.value = defaultKey;
+          this.showStatus('Key restablecida al valor predeterminado.', 'success');
         }
       });
     }
