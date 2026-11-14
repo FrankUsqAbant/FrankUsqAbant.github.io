@@ -1,9 +1,0 @@
-/* ==========================================================================
-   MAIN STYLESHEET ENTRYPOINT (styles.css)
-   Imports design tokens (base.css), UI components (components.css), 
-   and Peruvian tourist landmarks photo styles (landmarks.css).
-   ========================================================================== */
-
-@import url('base.css');
-@import url('components.css');
-@import url('landmarks.css');
