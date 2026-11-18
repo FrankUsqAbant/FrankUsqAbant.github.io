@@ -33,9 +33,9 @@
 ## 🧱 Estructura
 
 ```
-index.html        la tarjeta: HTML, CSS y JS en un solo archivo
-assets/           avatar, QR, favicon, imagen para compartir y la fuente
-scripts/huella.mjs  mantiene al día la huella de seguridad del script
+index.html          la tarjeta: HTML, CSS y JS en un solo archivo
+assets/            avatar, QR, favicon, imagen para compartir y la fuente
+scripts/huella.mjs mantiene al día la huella de seguridad del script
 ```
 
 ## 🛠️ Editar y publicar
